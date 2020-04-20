@@ -1,0 +1,7 @@
+<!--component/marquee/marquee.wxml-->
+<view class='marquee'>
+  <icon class='iconfont icon-laba'></icon>
+  <view class='text'>
+    <text class='textContent' style='left:{{marqueeDistance}}px;display:{{display}}'>{{text}}</text>
+  </view>
+</view>

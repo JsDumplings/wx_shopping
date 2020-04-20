@@ -1,0 +1,55 @@
+<!--pages/productList/productList.wxml-->
+<!-- 商品列表页 -->
+<view class='productList'>
+  <!-- 顶部搜索 -->
+  <view class='header'>
+    <form bindsubmit='searchFunc'>
+      <view class='search'>
+        <icon class='iconfont icon-search'></icon>
+        <input placeholder='输入商品名' value='' name="searchInput"></input>
+        <button form-type='submit'>搜索</button>
+      </view>
+    </form>
+    
+
+    <!-- 中间的tab -->
+    <view class='tab'>
+      <view class="{{tabIndex == '1'? 'showBorder' : 'default'}}"  bindtap='clickTab' data-index='1'>分类</view>
+      <view class="{{tabIndex == '2'? 'showBorder' : 'default'}}" bindtap='clickTab' data-index='2'>排序</view>
+      <view class="{{tabIndex == '3'? 'showBorder' : 'default'}}" bindtap='clickTab' data-index='3'>筛选</view>
+    </view>
+
+    <!-- tab  分类的隐藏 -->
+    <view class='hiddeContent1' wx:if="{{tabIndex == '1'}}">
+      <view class='left'>
+        <view class="{{tabClassifyIndex == index? 'hiddContent1-left-view' : 'default'}}" bindtap='clickTabClassify' data-index='{{index}}' wx:for="{{tabClassify}}" wx:key="index">{{item.type_name}}</view>
+      </view>
+      <view class='right'>
+        <view wx:for="{{tabClassify[tabClassifyIndex].type_detail}}" wx:key="index" bindtap='searchContent' data-type='{{tabClassify[tabClassifyIndex].type}}' data-classify='{{tabClassify[tabClassifyIndex].type_EngDetail[index]}}'>{{item}}</view>
+      </view>
+    </view>
+
+    <!-- tab 排序的隐藏 -->
+    <view class='hiddeContent2' wx:if="{{tabIndex == '2'}}">
+      <view wx:for="{{sortContent}}" wx:key="index" bindtap='sortClick' data-index="{{index}}">{{item}}</view>
+    </view>
+
+  </view>
+
+  <!-- 商品列表的内容 -->
+  <view class="content,{{tabIndex ? 'content-opacity' : 'default'}}" bindtap='hiddenTabContent'>
+    <view class='ContentLi' wx:for="{{content}}" wx:key="index"
+    bindtap='toCommodity' data-id="{{item._id}}">
+      <image src='{{item.imgSrc[0]}}'></image>
+      <view class='font'>
+        <text class='title'>{{item.presentation}}</text>
+        <text class='price'>￥{{item.price}}</text>
+        <!-- <text class='sale'><text>销量</text>{{item.sale}}</text> -->
+      </view>
+    </view>
+  </view>
+
+  <!-- 自定义弹窗 -->
+  <myShowModal style="display:{{myShowModalDisplay}}"></myShowModal>
+
+</view>

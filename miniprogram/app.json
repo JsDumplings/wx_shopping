@@ -1,0 +1,43 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/productList/productList",
+    "pages/commodity/commodity",
+    "pages/classify/classify",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "Seven柒个我",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+
+  "tabBar":{
+    "color":"#000000",
+    "selectedColor": "#FF0000",
+    "backgroundColor": "#FFF",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "iconPath":"images/icon/Home.png",
+        "selectedIconPath":"images/icon/Home1.png",
+        "text":"主页"
+      },
+      {
+        "pagePath": "pages/productList/productList",
+        "iconPath": "images/icon/search.png",
+        "selectedIconPath": "images/icon/search1.png",
+        "text": "服装查询"
+      },{
+        "pagePath": "pages/my/my",
+        "iconPath": "images/icon/contact.png",
+        "selectedIconPath": "images/icon/contact1.png",
+        "text": "联系我们"
+      }
+    ]
+  }
+}

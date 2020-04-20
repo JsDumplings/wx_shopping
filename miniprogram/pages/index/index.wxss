@@ -1,0 +1,161 @@
+.container{
+  overflow: hidden
+}
+.header{
+  width: 100%;
+  height: 50rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  position: absolute;
+  color:	#CFCFCF;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  margin: 20rpx 40rpx;
+}
+.location,.search{
+  height: 100%;
+  background-color: #FFF;
+  border-radius: 40rpx;
+  opacity: 0.4;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 20rpx;
+}
+.location{
+  width: 25%;
+}
+.search{
+  width: 62%;
+  margin-right: 10%;
+  margin-left: 2%;
+}
+.search input,.location input{
+  margin: 0;
+  min-height: 0;
+  height: 100%;
+  width: 80%;
+}
+.location icon,.search icon{
+  height: 100%;
+  line-height: 100%;
+  margin-right: 10rpx;
+  font-size: 40rpx;
+  display: block;
+  margin-top: -4rpx;
+}
+.swiper{
+  width: 100%;
+}
+.swiper swiper{
+  height: 350rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+
+/* 滚动信息 */
+.inform{
+  width: 100%
+}
+
+/* 标题 */
+.Title{
+  width: 100%;
+  padding: 30rpx;
+  margin-left: 20rpx;
+}
+
+/* 分类tab */
+
+.typeTab{
+  height: 200rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20rpx;
+}
+.typeTabLi{
+  height: 100%;
+  width: 30%;
+  text-align: center;
+}
+.typeTabLi image{
+  height: 140rpx;
+  width: 140rpx;
+  border-radius: 50%;
+}
+.typeTabLi text{
+  display: block;
+  font-size: 30rpx;
+}
+
+/* 特推主打tweet */
+.tweet{
+  width: 100%;
+  background-color:#EAEAEA;
+  padding-top: 20rpx;
+}
+.tweet view image{
+  width: 100%;
+  height: 350rpx
+}
+
+/* 推荐商品 */
+.recommend-top{
+  text-align: center;
+  padding: 20rpx;
+  font-size: 28rpx;
+}
+.recommend-content{
+  position: relative;
+  overflow: hidden;
+  background-color: #F5F5F5;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.recommend-content .ContentLi{
+  width: 49%;
+  height: 500rpx;
+  margin-top: 2%;
+  background-color: #FFF;
+}
+.recommend-content .ContentLi image{
+  width: 100%;
+  height: 350rpx;
+}
+.recommend-content .ContentLi .font{
+  font-size: 22rpx;
+  padding-left: 20rpx;
+}
+.recommend-content .ContentLi .font text{
+  display: block;
+}
+.recommend-content .ContentLi .font .title{
+  overflow: hidden;
+  display:-webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  white-space: normal;
+}
+.recommend-content .ContentLi .font .price{
+  color: #FF0000
+}
+.recommend-content .ContentLi .font .sale{
+  text-align: right;
+  padding-right: 10rpx;
+}
+.recommend-content .ContentLi .font .sale text{
+  display: inline-block;
+  margin-right: 4rpx;
+  color: #AAAAAA;
+}
+
+.recommend-bottom{
+  text-align: center;
+  padding-bottom: 20rpx;
+  font-size: 28rpx;
+}

@@ -1,0 +1,20 @@
+/* component/myShowModal/myShowModal.wxss */
+@import '../../style/iconfont.wxss';
+.myShowModal{
+  width: 250rpx;
+  height: 250rpx;
+  position: absolute;
+  z-index:100;
+  left: 34%;
+  top: 40%;
+  background-color: #DBDBDB;
+  text-align: center;
+  border-radius: 10rpx;
+}
+.myShowModal icon{
+  width: 80%;
+  padding: 0 10%;
+  margin-top: 10%;
+  height: 60%;
+  font-size: 130rpx;
+}

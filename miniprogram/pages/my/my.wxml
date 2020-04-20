@@ -1,0 +1,12 @@
+<!--pages/my/my.wxml-->
+<view>
+  <view style='width:60%;height:400rpx;margin:200rpx auto;text-align:center;line-height:400rpx;margin-top:100rpx;overflow:auto'>
+  <image src='../../images/erweima/1.jpg' style='width:100%;height:100%'></image>
+  </view>
+  <view style="height:100rpx;width:60%;text-align:center;margin:0 auto;margin-top:50rpx">
+    截图加好友
+  </view>
+  <view style="height:100rpx;width:50%;text-align:center;margin:0 auto;margin-top:50rpx">
+    <button bindtap='call'>拨打电话</button>
+  </view>
+</view>

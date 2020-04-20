@@ -1,0 +1,70 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 顶部地址跟搜索框 -->
+  <view class='header' style="display:none">
+    <!-- location -->
+    <view class='location' bindtap='location'>
+    <icon class='iconfont icon-location'></icon>
+      <input placeholder='北京市' />
+    </view>
+    <!-- search -->
+    <view class='search' bindtap='search'>
+      <icon class='iconfont icon-search'></icon>
+      <input placeholder='输入商品名' disabled='true' />
+    </view>
+  </view>
+
+  <!-- swiper -->
+  <view class='swiper'>
+    <swiper 
+    indicator-dots='true'
+    indicator-active-color='#FF8247'
+    autoplay='true'
+    interval='3000'
+    duration='1000'
+    >
+      <block wx:for="{{swiperImgUrls}}" wx:key="item.id">
+        <swiper-item>
+          <image src='{{item.imgSrc[0]}}' class="slide-image" bindtap='toCommodity' data-id="{{item._id}}" />
+        </swiper-item>
+      </block> 
+    </swiper>
+  </view>
+
+  <!-- marquee通知 -->
+  <!-- <view class='inform'>
+    <marquee text="{{marquee_content}}"></marquee>
+  </view> -->
+  <!-- 分类tab -->
+  <view class='Title'>商品分类</view>
+  <view class='typeTab'>
+    <view class='typeTabLi' wx:for="{{typeTabContents}}" wx:for-item="item" wx:key="index">
+      <image src='{{item.img}}'/>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+
+  <!-- 特推主打 -->
+  <!-- <view class='tweet'>
+    <view wx:for="{{tweetData}}" wx:key="index">
+      <image src='{{item.src}}' bindtap='productList' data-type="{{item.type}}"></image>
+    </view>
+  </view> -->
+
+  <!-- 推荐商品 -->
+  <view class='Title'>商品推荐</view>
+  <view class='recommend'>
+    <!-- <view class='recommend-top'>商品推荐</view> -->
+    <view class='recommend-content'>
+      <view class='ContentLi' wx:for="{{recommendData}}" wx:key="index"             bindtap='toCommodity' data-id="{{item._id}}">
+        <image src='{{item.imgSrc[0]}}'></image>
+        <view class='font'>
+          <text class='title'>{{item.presentation}}</text>
+          <text class='price'>￥{{item.price}}</text>
+          <!-- <text class='sale'><text>销量</text>{{item.sale}}</text> -->
+        </view>
+      </view>
+    </view>
+    <view class='recommend-bottom' style='display:{{more}}'>上拉加载更多</view>
+  </view>
+</view>

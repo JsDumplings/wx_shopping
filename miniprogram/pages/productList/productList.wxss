@@ -1,0 +1,169 @@
+/* pages/productList/productList.wxss */
+.productList{
+  background-color: #EAEAEA;
+}
+.header{
+  width: 100%;
+  position: fixed;
+  background-color: #EAEAEA;
+  z-index: 2;
+  top: 0;
+}
+
+.search{	
+  padding:1% 2%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.search icon{
+  position: absolute;
+  top: 18rpx;
+  left: 4%;
+  z-index: 2;
+}
+.search input{
+  background-color: #FFF;
+  padding-left: 12%;
+  height: 80rpx;
+  font-size: 30rpx;
+  width: 64%
+}
+.search button{
+  margin: 0;
+  padding: 0;
+  height: 80rpx;
+  width: 20%;
+  background-color: #FF0000;
+  border-radius: 0 10rpx 10rpx 0;
+  color: #FFF;
+}
+.search button::after{
+  border: none;
+}
+
+/* tab选项功能 */
+.tab{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content:space-around;
+  font-size: 34rpx;
+  color: #696969;
+  background-color: #FFF;
+}
+.tab view{
+  width: 33.33%;
+  border-bottom:2rpx solid #FF0000;
+  border-width: 0rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+.showBorder{ 
+  border-width: 2rpx !important;
+}
+/* 给content透明度 */
+.content-opacity{
+  opacity: 0.2
+}
+
+/* tab 分类的隐藏 */
+.hiddeContent1{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  text-align: center;
+  padding-top: 2rpx;
+  background-color: #FFF;
+  height: 500rpx;
+}
+.hiddeContent1 .left{
+  background-color: #FFF;
+  width: 33.33%;
+}
+.hiddeContent1 .left view{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.hiddeContent1 .right{
+  width: 66.66%;
+}
+.hiddeContent1 .right view{
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #F5F5F5;
+  border-bottom: 1rpx solid #EAEAEA;
+  border-left: none;
+}
+.hiddContent1-left-view{
+  background-color: #F5F5F5;
+  border-bottom: 1rpx solid #EAEAEA;
+  color: #FF0000;
+  border-left: 1rpx solid #FF0000;
+  border-right: none;
+}
+
+/* 排序的隐藏 */
+.hiddeContent2{
+  background-color: #FFF;
+  margin-top: 2rpx;
+  padding: 0 10rpx 30rpx 10rpx;
+}
+.hiddeContent2 view{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #696969;
+  border-bottom: 1rpx solid #EAEAEA;
+}
+
+/* 列表中的内容 */
+.content{
+  min-height: 800rpx;
+  position: relative;
+  overflow: hidden;
+  margin-top: 175rpx;
+  background-color: #F5F5F5;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 80rpx;
+}
+.content .ContentLi{
+  width: 49%;
+  height: 500rpx;
+  margin-top: 2%;
+  background-color: #FFF;
+}
+.content .ContentLi image{
+  width: 100%;
+  height: 350rpx;
+}
+.content .ContentLi .font{
+  font-size: 22rpx;
+  padding-left: 20rpx;
+}
+.content .ContentLi .font text{
+  display: block;
+}
+.content .ContentLi .font .title{
+  overflow: hidden;
+  display:-webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  white-space: normal;
+}
+.content .ContentLi .font .price{
+  color: #FF0000
+}
+.content .ContentLi .font .sale{
+  text-align: right;
+  padding-right: 10rpx;
+}
+.content .ContentLi .font .sale text{
+  display: inline-block;
+  margin-right: 4rpx;
+  color: #AAAAAA;
+}

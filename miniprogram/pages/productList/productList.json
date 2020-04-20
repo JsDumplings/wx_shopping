@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "myShowModal": "../../component/myShowModal/myShowModal"
+  }
+}

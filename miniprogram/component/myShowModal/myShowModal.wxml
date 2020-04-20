@@ -1,0 +1,5 @@
+<!--component/myShowModal/myShowModal.wxml-->
+<view class='myShowModal'>
+ <icon class='iconfont icon-ku'></icon>
+ <text>暂无该功能</text>
+</view>
